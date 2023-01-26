@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video popup
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="video.css">
+</head>
+<body>
+    <div class="main-container">
+        <img src="https://images.unsplash.com/photo-1662695689826-1a48e0d47da4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80">
+        
+   
+    <h2>cycle race</h2>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error omnis fugit accusantium suscipit veritatis quo voluptates harum voluptate exercitationem eum, blanditiis dolore voluptatum est mollitia distinctio quisquam eveniet ex non.
+    </p>
+    <button class="btn">watch now</button>
+</div>
+
+     <div class="videos-container active">
+        <video src="video.mp4" controls></video>
+        <i class="fas fa-times" id="clse"></i>
+     </div>
+
+
+     <script>
+        const btn=document.querySelector(".btn");
+        const videoEl=document.querySelector(".videos-container")
+        const closes=document.querySelector(".fa-times");
+        
+
+        btn.addEventListener('click',()=>{
+            videoEl.classList.remove("active");
+        })
+        closes.addEventListener('click',()=>{
+            videoEl.classList.add("active");
+        });
+     </script>
+    
+</body>
+</html>
